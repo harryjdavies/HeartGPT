@@ -18,10 +18,11 @@ Tokens with the same value (the time-series equivalent of a **homonym**) that oc
 
 This work was inspired by a [tutorial](https://github.com/karpathy/nanoGPT) created by Andrej Karpathy.
 
-# Code and model files:
+# Base code and model files:
 Heart_PT_generate.py is a python script which loads in example contexts of either ECG or PPG, and uses the appropriate model to generate future time steps.
 
 The pre-trained pytorch model files are in zip folders (ECGPT_560k_iters and PPGPT_500k_iters).
 
-**Fine-tuning example code will be added soon.**
+# Fine-tuning
 
+![Finetune_fig](figures/fine_tuning_diagram.png)
