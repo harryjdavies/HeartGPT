@@ -16,7 +16,7 @@ Tokens with the same value (the time-series equivalent of a **homonym**) that oc
 ![individual_heads](figures/SA_individual_editw.png)
 
 
-This work was inspired by a [tutorial](https://github.com/karpathy/nanoGPT) created by Andrej Karpathy.
+This work was inspired by a [tutorial](https://github.com/karpathy/ng-video-lecture) created by Andrej Karpathy.
 
 # Base code and model files:
 **Heart_PT_generate.py** is a python script which loads in example contexts of either ECG or PPG, and uses the appropriate model to generate future time steps.
