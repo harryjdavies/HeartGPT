@@ -2,6 +2,10 @@
 Interpretable Pre-Trained Transformers for Heart Time-Series Data: 
 [Link to the paper](https://www.arxiv.org/abs/2407.20775)
 
+06/09/2024 Update: Two new GUIs have been added. 
+1. **Heart_GPT_GUI_generation**, where you can load in context in the form of a csv, and the chosen model will generate in real time.
+2. **Heart_GPT_GUI_interpretability**, where you can examine the attention weights for the base models for a given input context.
+
 ![GPT_comparison](figures/Comparison_slide_cropped.png)
 
 In this work,  we apply the generative pre-trained transformer (GPT) framework to periodic heart time-series data to create two pre-trained general purpose cardiac models, namely PPG-PT and ECG-PT. The models are capable of being fine-tuned for many different cardiac related tasks such as screening for arrythmias. A big enphasis of this work is on showing that the pre-trained models are fully interpretable, and that this interpretability carries over to fine-tuning tasks. The pre-trained transformers are interpretable in the following ways -
