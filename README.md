@@ -2,6 +2,9 @@
 Interpretable Pre-Trained Transformers for Heart Time-Series Data: 
 [Link to the paper](https://www.arxiv.org/abs/2407.20775)
 
+11/09/2024 Update: A new GUI has been added. 
+1. **Heart_GPT_GUI_interpretability_AF**, which gives a probability of AFib and reasoning (change in attention weights).
+
 06/09/2024 Update: Two new GUIs have been added. 
 1. **Heart_GPT_GUI_generation**, where you can load in context in the form of a csv, and the chosen model will generate in real time.
 2. **Heart_GPT_GUI_interpretability**, where you can examine the attention weights for the base models for a given input context.
