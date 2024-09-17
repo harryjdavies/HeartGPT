@@ -2,6 +2,9 @@
 Interpretable Pre-Trained Transformers for Heart Time-Series Data: 
 [Link to the paper](https://www.arxiv.org/abs/2407.20775)
 
+17/09/2024 Update: A new GUI has been added. 
+1. **Heart_GPT_GUI_interpretability_AF**, which automatically estimates beats of long finger PPG sequences, and gives a confidence level (signal quality). This currently does not work with wearables data with different morphologies, e.g ear and wrist. A new version is under development for this application.
+
 11/09/2024 Update: A new GUI has been added. 
 1. **Heart_GPT_GUI_interpretability_AF**, which gives a probability of AFib and reasoning (change in attention weights).
 
