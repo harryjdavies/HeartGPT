@@ -36,7 +36,7 @@ This GUI allows users to automatically detect beats in an uploaded finger PPG si
 ![beat_gui](Figures/beat_detection_GUI.PNG)
 
 
-**Important Information**
+**Important Information:**
 The HeartGPT models were trained on ECG sampled at 100Hz, and finger PPG sampled at 50Hz. Inputting signals of different sample frequencies, or different morphologies such as wrist or ear PPG, will have a negative impact on the quality of model inference. 
 
 
