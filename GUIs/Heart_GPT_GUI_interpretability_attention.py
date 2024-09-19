@@ -61,7 +61,7 @@ class Head(nn.Module):
         out = wei @ v
 
         self.weights_matrices.append(wei.detach().cpu().numpy())  # Store the weights matrix in the list
-        print(f"weights_matrices size: {np.array(self.weights_matrices).shape}")  # Print the full size of weights_matrices
+        #print(f"weights_matrices size: {np.array(self.weights_matrices).shape}")  # Print the full size of weights_matrices
 
         return out
 
@@ -200,7 +200,7 @@ class App(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.title = 'Heart GPT Interpretability'
+        self.title = 'Heart GPT Interpretability: Attention'
         self.left = 100
         self.top = 100
         self.width = 800
@@ -215,6 +215,14 @@ class App(QMainWindow):
         self.setCentralWidget(self.central_widget)
 
         self.layout = QVBoxLayout(self.central_widget)
+
+        info_layout = QHBoxLayout()
+        self.info_button = QPushButton('Information', self)
+        self.info_button.setToolTip('This GUI is designed to help users interpret the operation of the HeartGPT models.\nFor each token in the input context, users can plot the attention weights of each layer and head.\nThe relevant example in the paper "Interpretable Pre-Trained Transformers for Heart Time-Series Data" is the plot of aggregate attention.')
+        self.info_button.setFixedSize(120, 20)  # Make the button smaller
+        info_layout.addWidget(self.info_button)
+        info_layout.addStretch()  # Add stretch to push the button to the left
+        self.layout.addLayout(info_layout)
 
         self.plot_canvas = PlotCanvas(self)
         self.layout.addWidget(self.plot_canvas)
