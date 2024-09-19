@@ -2,15 +2,7 @@
 Interpretable Pre-Trained Transformers for Heart Time-Series Data: 
 [Link to the paper](https://www.arxiv.org/abs/2407.20775)
 
-17/09/2024 Update: A new GUI has been added. 
-1. **Heart_GPT_GUI_PPG_beat_full_averaged**, which automatically estimates beats of long finger PPG sequences, and gives a confidence level (signal quality). This currently does not work with wearables data with different morphologies, e.g ear and wrist. A new version is under development for this application. In the code there is a shift parameter, which controls how much to shift the block by (default is 100 samples/2 seconds). Input PPG must be 50Hz, as with other GUIs. 
-
-11/09/2024 Update: A new GUI has been added. 
-1. **Heart_GPT_GUI_interpretability_AF**, which gives a probability of AFib and reasoning (change in attention weights).
-
-06/09/2024 Update: Two new GUIs have been added. 
-1. **Heart_GPT_GUI_generation**, where you can load in context in the form of a csv, and the chosen model will generate in real time.
-2. **Heart_GPT_GUI_interpretability**, where you can examine the attention weights for the base models for a given input context.
+In this repo, there are trained model files, both for the pre-trained models ECGPT and PPGPT, and the models fine-tuned for arrythmias and beat detection. There are also GUIs designed for generation, interpretability, and for implementation of the fine-tuned models.
 
 ![GPT_comparison](figures/Comparison_slide_cropped.png)
 
