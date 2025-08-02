@@ -1,0 +1,25 @@
+model:
+  pretrained_path: "model_files/ECGPT_560k_iters.pth"
+  vocab_size: 101
+  block_size: 500
+  n_embd: 64
+  n_head: 8
+  n_layer: 8
+  dropout: 0.2
+
+training:
+  batch_size: 32
+  learning_rate: 1e-4
+  max_epochs: 2
+  weight_decay: 0.0
+
+freeze:
+  unfreeze_last_block: true
+  unfreeze_layer_norm: true
+
+data:
+  train_csv: "path/to/train_labels.csv"
+  val_csv: "path/to/val_labels.csv"
+
+output:
+  dir: "finetune_checkpoints"

@@ -1,0 +1,20 @@
+model:
+  type: ECG_PT          # or PPG_PT
+  block_size: 500
+  n_embd: 64
+  n_head: 8
+  n_layer: 8
+  dropout: 0.2
+  vocab_size:
+    ECG_PT: 101
+    PPG_PT: 102
+  model_paths:
+    ECG_PT: Model_files/ECGPT_560k_iters.pth
+    PPG_PT: Model_files/PPGPT_500k_iters.pth
+
+input:
+  context_csv: Example_inputs/example_context_ECG.csv
+
+output:
+  model_output: outputs/model_output.csv
+  tokenized_context: outputs/tokenised_context.csv

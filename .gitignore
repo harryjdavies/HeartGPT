@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pth
+*.pt
+outputs/*
+!outputs/.gitkeep
+checkpoints/*
+
+finetune_checkpoints/*
