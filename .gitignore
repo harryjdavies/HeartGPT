@@ -5,4 +5,5 @@ __pycache__/
 outputs/*
 !outputs/.gitkeep
 checkpoints/*
+
 finetune_checkpoints/*
