@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 *.pth
 *.pt
+outputs/*
+!outputs/.gitkeep

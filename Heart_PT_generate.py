@@ -17,19 +17,19 @@ n_embd = 64
 n_head = 8
 n_layer = 8
 dropout = 0.2
-model_path_ppg = "D:/HeartGPTModels/PPGPT_500k_iters.pth"
-model_path_ecg = "D:/HeartGPTModels/ECGPT_560k_iters.pth"
+model_path_ppg = "Model_files/PPGPT_500k_iters.pth"
+model_path_ecg = "Model_files/ECGPT_560k_iters.pth"
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 if model_config == 'PPG_PT':
     vocab_size = 102 #102 for PPGPT, 101 for ECGPT
     model_path = model_path_ppg
-    context_path = 'D:/HeartGPTModels/example_context_PPG.csv'
+    context_path = 'Example_inputs/example_context_PPG.csv'
 elif model_config == 'ECG_PT':
     vocab_size = 101
     model_path = model_path_ecg
-    context_path = 'D:/HeartGPTModels/example_context_ECG.csv'
+    context_path = 'Example_inputs/example_context_ECG.csv'
 
 
 def tokenize_biosignal(data):
@@ -214,14 +214,14 @@ output = (m.generate(example_context_tensor, max_new_tokens=500)[0].tolist())
 
 # convert output to DataFrame and save as csv
 output_df = pd.DataFrame(output)
-output_df.to_csv('D:/HeartGPTModels/model_output.csv', index=False, header=False)
+output_df.to_csv('outputs/model_output.csv', index=False, header=False)
 
 data_tokenised = np.transpose(data_tokenised).tolist()
 # convert data_tokenised to DataFrame and save as csv
 data_tokenised_df = pd.DataFrame(data_tokenised)
 # convert the dataframe to integer
 data_tokenised_df = data_tokenised_df.astype(int)
-data_tokenised_df.to_csv('D:/HeartGPTModels/tokenised_context.csv', index=False, header=False)
+data_tokenised_df.to_csv('outputs/tokenised_context.csv', index=False, header=False)
 print('Generation saved to CSV')
 
 
