@@ -9,6 +9,7 @@ import pandas as pd
 # The explaination behind this code and the model files can be found in the paper "Interpretable Pre-Trained Transformers for Heart Time-Series Data"
 # available at https://arxiv.org/abs/2407.20775
 
+
 model_config = 'ECG_PT' #switch between 'ECG_PT' and 'PPG_PT'
 
 block_size = 500 # this is context length
