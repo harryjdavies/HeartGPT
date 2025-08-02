@@ -30,3 +30,6 @@ The pre-trained pytorch model files are in zip folders (**ECGPT_560k_iters** and
 An example adapted fine-tuning model definition is provided in **"Heart_PT_finetune.py"**, along with how to freeze different layers. 
 
 ![Finetune_fig](figures/fine_tuning_diagramw.png)
+
+
+
