@@ -4,3 +4,4 @@ __pycache__/
 *.pt
 outputs/*
 !outputs/.gitkeep
+checkpoints/*

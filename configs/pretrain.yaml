@@ -1,0 +1,33 @@
+# configs/pretrain.yaml
+
+model:
+  vocab_size: 101
+  block_size: 500
+  n_embd: 64
+  n_head: 8
+  n_layer: 8
+  dropout: 0.2
+
+training:
+  batch_size: 64
+  max_iters: 1000000
+  eval_interval: 2000
+  save_interval: 20000
+  eval_iters: 200
+
+optimizer:
+  learning_rate: 3e-4
+  weight_decay: 0.0
+
+data:
+  use_real: false                # set true / override via CLI to use .mat
+  mat_path: ""                  # path to ECG .mat file
+  train_frac: 0.9
+
+random_sequences:
+  base_sequence_count: 200
+  base_sequence_length: 1000
+  seed: 42
+
+output:
+  dir: checkpoints
